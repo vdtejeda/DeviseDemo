@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable,
-         :lockable
+         :lockable, :zxcvbnable
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
